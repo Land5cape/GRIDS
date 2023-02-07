@@ -1,7 +1,7 @@
 
 # GRIDS
 ## Test Demo
-Please download model weight from [[BaiduDisk](https://pan.baidu.com/s/1v19yldHsvYNR-zplXQMikg), Password: tmtj] and run  
+Please download model weight from [ [BaiduDisk](https://pan.baidu.com/s/1v19yldHsvYNR-zplXQMikg), Password: tmtj ] and run  
 ```
 python demo.py
 ```  
