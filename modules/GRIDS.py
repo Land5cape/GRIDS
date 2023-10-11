@@ -85,19 +85,19 @@ class Distribution(nn.Module):
 
 
 class GRIDS(torch.nn.Module):
-    def __init__(self, device=torch.device('cpu'), type='ti'):
+    def __init__(self, device=torch.device('cpu'), type='ti', drop_path_rate=0.0):
         super(GRIDS, self).__init__()
 
         self.device = device
 
         if type == 'ti':
-            self.feature_extractor = pvig_ti_224_gelu()
+            self.feature_extractor = pvig_ti_224_gelu(drop_path_rate=drop_path_rate)
         elif type == 's':
-            self.feature_extractor = pvig_s_224_gelu()
+            self.feature_extractor = pvig_s_224_gelu(drop_path_rate=drop_path_rate)
         elif type == 'm':
-            self.feature_extractor = pvig_m_224_gelu()
+            self.feature_extractor = pvig_m_224_gelu(drop_path_rate=drop_path_rate)
         elif type == 'b':
-            self.feature_extractor = pvig_b_224_gelu()
+            self.feature_extractor = pvig_b_224_gelu(drop_path_rate=drop_path_rate)
         else:
             raise Exception('wrong model type')
 
